@@ -1,0 +1,1001 @@
+* {
+  font-family: 'Yu Gothic', 'Hiragino Sans', sans-serif;
+}
+
+/* scrollbar */
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #549361;
+  border-radius: 5px;
+
+
+}
+
+
+/*loading--------------------------*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #549361;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#splash_logo svg {
+  width: 600px;
+}
+
+
+#mask .st0 {
+  fill: none;
+  stroke:rgb(255, 255, 255);
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+}
+/*↑loading--------------------------*/
+
+
+
+
+/* eachTextAmine---------------------- */
+.eachTextAnime span {
+  opacity: 0;
+}
+
+.eachTextAnime.appeartext span {
+  animation: text_anime_on 1s ease-out forwards;
+}
+
+@keyframes text_anime_on {
+  0% {opacity: 0;}
+  100%{opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ↑eachTextAmine---------------------- */
+
+
+/* scrolldown----------------------------- */
+.scrolldown2 {
+  position: fixed;
+  bottom: 15vh;
+  right: 3%;
+  z-index: 998;
+}
+
+.scrolldown2 span {
+  position: absolute;
+  left: 10px;
+  bottom: 30px;
+
+  color: #549361;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+.scrolldown2::before {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #549361;
+
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    circlemovehide 1.6s ease-in-out infinite;
+}
+
+
+@keyframes circlemove {
+  0%{bottom: 100px;}
+  100%{bottom: -5px;}
+}
+
+
+@keyframes circlemovehide {
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  80%{opacity: 0.9;}
+  100%{opacity: 0;}
+}
+
+.scrolldown2::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 2px;
+  height: 100px;
+  background: #549361;
+}
+/* ↑scrolldown----------------------------- */
+
+
+
+
+
+
+
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+header {
+  position: fixed;
+  background-color: #54935ede;
+  height: 7.96vw;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  line-height: 7.96vw;
+  width: 100%;
+  z-index: 999;
+}
+
+.header-left {
+  line-height: 7.96vw;
+  display: flex;
+}
+
+.header-left a:nth-child(1) {
+  width: 4.6vw;
+  display: block;
+  margin-left: 3.47vw;
+  margin-right: 1.38vw;
+}
+
+.header-left a:nth-child(2) {
+  width: 14.7vw;
+  display: block;
+}
+
+.header-right ul{
+  display: flex;
+  font-size: 1.38vw;
+
+}
+
+
+
+.header-right li a {
+  padding: 0.5em 1em;
+}
+
+
+#top-title {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7vw;
+  color: white;
+  text-shadow: 1px 1px 10px white;
+}
+
+
+
+/*headerbtn-----------------------------------*/
+/*上に上がる動き*/
+#header.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+/*下に下がる動き*/
+#header.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*↑headerbtn-----------------------------------*/
+
+
+
+
+/*openbtn----------------------------------------*/
+.openbtn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: #549361;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+}
+
+.openbtn span {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: white;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+
+/*×になる(.active)*/
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px)rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px)rotate(45deg);
+  width: 30%;
+}
+
+/*fadeDown*/
+.fadeDown {
+  animation-name: fadeDownAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  display: block;
+}
+
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+  display: block;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*dnone*/
+#header.dnone {
+  opacity: 0;
+}
+
+
+#header.dnone.panelactive {
+  opacity: 1;
+}
+
+
+/* open panel */
+#openpanel {
+  background: #549361;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 8vw;
+  display: block;
+}
+
+#openpanel ul{
+  font-size: 1.38vw;
+}
+
+#openpanel li {
+  display: block;
+}
+
+#openpanel li a {
+  display: inline-block;
+  margin-bottom: 10vh;
+  padding: 00.5em 1em;
+}
+
+
+
+
+.panelshow {
+  animation-name: panelshow;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+@keyframes panelshow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-100vw);
+  }
+}
+
+
+.panelhide {
+  animation-name: panelhide;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+@keyframes panelhide {
+  from {
+    opacity: 1;
+    transform: translateX(-100vw);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
+
+
+/*openbtn----------------------------------------*/
+
+
+
+
+
+
+/* textfadeIn ----------------------------------*/
+.textfadeInTrigger {
+  opacity: 0;
+}
+
+.textfadeIn {
+  animation-name: textfadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes textfadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* textfadeIn ----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*slider----------------------------------------------*/
+.slider {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+.slider-item {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-item img {
+  width: 100%;
+}
+
+.slick-prev, 
+.slick-next {
+  position: absolute;
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  outline: none;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  height: 25px;
+  width: 25px;
+}
+
+.slick-prev {
+  left: 2.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  right: 2.5%;
+  transform: rotate(45deg);
+}
+
+.slick-dots {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  margin: -3.47vw 0 0 6.94vw;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  background: #549361;
+}
+
+.slick-dots .slick-active button {
+  background: #8F5152;
+}
+/*↑slider----------------------------------------------*/
+
+
+
+
+
+
+/*ぱんくずリスト----------------------------------------------*/
+.breadcrumb {
+  margin: 3.5vw 2.7vw;
+}
+
+.breadcrumb li {
+  display: inline-block;
+}
+
+.breadcrumb li::after {
+  font-family: "FontAwesome 5 Brands";
+  
+}
+/*↑ぱんくずリスト----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*紙芝居---------------------------------------------------------*/
+#header {
+  position: fixed;
+  z-index: 2;
+}
+
+#container {
+  position: relative;
+  z-index: 1;
+}
+
+section.fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+section.fixed:nth-of-type(1) {
+  background: white;
+}
+
+section.fixed:nth-of-type(2) {
+  background:rgb(255, 251, 236);
+}
+
+
+section.fixed:nth-of-type(3) {
+  background: #549361;
+}
+
+
+#footer {
+  position: relative;
+  z-index: 2;
+}
+/*↑紙芝居---------------------------------------------------------*/
+
+
+
+
+
+.linkbtnanime li a {
+  position: relative;
+}
+
+.linkbtnanime li a::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+
+  width: 0;
+  height: 100%;
+  background: #8F5152;
+  transition: all .5s;
+  opacity: 0;
+}
+
+.linkbtnanime li a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.linkbtnanime li a:hover {
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  margin: 10.41vw 6.73vw 16.66vw;
+}
+
+.btn a:hover {
+  transform: scale(1.1);
+  transition: all .4s;
+}
+
+.btn svg {
+  width: 13.78vw;
+
+}
+
+.imp-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vw;
+}
+
+.imp-icon {
+  width: 7.46vw;
+}
+
+.imp-box {
+  width: 61.85vw;
+  height: 9.37vw;
+  border-top: 6px solid #6C518F;
+  border-right: 6px solid #6C518F;
+  border-bottom: 6px solid #6C518F;
+
+  padding: 20px;
+}
+
+
+
+
+/*pic-slider-------------------------------------*/
+.pic-slider-section {
+  padding: 8.8vw 0 50vw;
+}
+
+.pic-slider img {
+  height: 20.8vw;
+}
+
+.pic-slider .slick-slide {
+  margin: 0 5vw;
+}
+/*↑pic-slider-------------------------------------*/
+
+
+
+
+.never-change {
+  display: flex;
+  padding: 4vw 9.79vw 40vw;
+
+}
+
+.ne-che-text {
+  width: 50%;
+}
+
+.ne-che-img {
+  width: 50%;
+}
+
+
+.ne-che-text h2 {
+  
+  font-size: 4.16vw;
+  color: black;
+  line-height: 1.5em;
+  letter-spacing: 0.01em;
+  
+}
+
+.ne-che-text h2:first-of-type {
+  margin-top: 70px;
+}
+
+.ne-che-text h2:last-of-type {
+  margin-bottom: 3.8vw;
+}
+
+.ne-che-text p {
+  line-height: 1.5em;
+  font-size: 1.38vw;
+}
+
+.ne-che-img svg {
+  width: 36.9vw;
+}
+
+.ne-che-text a {
+  margin-top: 9.16vw;
+  display: inline-block;
+}
+
+.linkbtn {
+  padding: 25px 65px 25px 40px;
+  background: #8F5152;
+  color: white;
+  font-size: 1.38vw;
+  position: relative;
+}
+
+.linkbtn i {
+  position: absolute;
+  top: 50%;
+  right: 13%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5vw;
+
+}
+
+.linkbtn:hover i {
+  right: 5%;
+  transition: all 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+.news-section {
+  background: #549361;
+  padding: 8.86vw 4.09vw 30vw;
+  color: white;
+  
+}
+
+.news-section-title {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  margin-bottom: 6.31vw;
+}
+
+.section-title > div {
+  margin-right: 1.2vw;
+}
+
+.section-title h2 {
+  font-size: 3.3vw;
+  font-family: "Yu Mincho", serif;
+  
+}
+
+.section-title p {
+  font-family: "Yu Gothic", sans-serif;
+  text-align: center;
+  font-size: 1vw;
+  letter-spacing: 0.1em;
+}
+
+.news-section-title svg {
+  width: 3.65vw;
+}
+
+
+.news-contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.zoomIn {
+  display: block;
+}
+
+.zoomIn:not(:last-child) {
+  margin-right: 3vw;
+}
+
+.zoomIn img {
+  transform: scale(1);
+  transition: .3s ease-in-out;
+  width: 100%;
+}
+
+.zoomIn a:hover img {
+  transform: scale(1.1);
+}
+
+.mask {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.zoomIn-text {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.news-btn {
+  text-align: center;
+  margin-top: 8.88vw;
+}
+
+.news-btn a {
+  display: inline-block;
+}
+
+
+
+.sns-section {
+  background: white;
+  padding: 8.86vw 4.09vw;
+}
+
+.sns-contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sns-content i {
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  margin-bottom: 0.5em;
+  color: #549361;
+}
+
+
+
+.sns-wrapper {
+  background: #549361;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+
+.sns-wrapper iframe,
+.instagram-media,
+.twitter-timeline {
+  width: 25.69vw;
+  height: 45.13vw;
+}
+
+
+@media screen and (max-width:1440px) {
+  .sns-wrapper {
+    transform: scale(0.9);
+  }
+}
+
+
+
+
+
+footer {
+  background: #549361;
+  color: white;
+}
+
+.footer-container {
+  padding: 6.69vw 9.44vw;
+}
+
+.footer-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.footer-left {
+  line-height: 7.96vw;
+  display: flex;
+}
+
+.footer-left a:nth-child(1) {
+  width: 4.6vw;
+  display: block;
+  margin-right: 1.38vw;
+}
+
+.footer-left a:nth-child(2) {
+  width: 14.7vw;
+  display: block;
+}
+
+.footer-text {
+  margin-top: 3.8vw;
+}
+
+.footer-text p:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+/* loading.html------------------------ */
+#loading-page-title {
+  text-align: center;
+  display: block;
+  color: black;
+  font-size: 2vw;
+  margin: 10vh;
+  
+}
+
+#main-loading {
+  margin-bottom: 10vh;
+}
+
+
+
+.back-to-top-con {
+  text-align: center;
+}
+
+.back-to-top {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.back-to-top i {
+  margin-left: 1vw;
+}
