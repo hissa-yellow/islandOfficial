@@ -1,12 +1,5 @@
 //--------------------------------------
-var stroke;
-stroke = new Vivus('mask', {
-  start:'manual',
-  type:'scenario-sync',
-  duration: 150,
-  forceRender:false,
-  animTimingFunction:Vivus.EASE,
-});
+
 
 
 //eachTextAnime 
@@ -46,11 +39,9 @@ function textfadeIn() {
 
 
 $(window).on('load',function() {
-  $('#splash').delay(3500).fadeOut('slow');
-  $('#splash_logo').delay(3500).fadeOut('slow');
-    stroke.play();
+  
 
-    ScrollAnime();
+  ScrollAnime();
     
 
     //eachTextAnime
@@ -82,8 +73,11 @@ $(window).on('load',function() {
 
 
 
-
-
+    //tab Anime
+    $('.tab li:first-of-type').addClass('active');
+    $('.area:first-of-type').addClass('is-active');
+    var hashName = location.hash;
+    GethashID(hashName);
 
 
   
@@ -203,59 +197,39 @@ $('#g-navi li a').click(function() {
 
 
 
-//slider----------------------------------
-$('.slider').slick({
-  fade:true,
-  autoplay:true,
-  autoplaySpeed:3000,
-  speed:1000,
-  infinite:true,
-  slidesToShow:1,
-  slidesToScroll:1,
-  arrows:true,
-  prevArrow:'<div class="slick-prev"></div>',
-  nextArrow:'<div class="slick-next"></div>',
-  dots:true,
-  pauseOnFocus:false,
-  pauseOnHover:false,
-  pauseOnDotsHover:false,
-});
-
-
-$('.slider').on('touchmove', function(event, slick, currentSlide,nextSlide){
-  $('.slider').slick('slickPlay');
-});
-
-
-
-
-
-
-//pic-slider-------------------------------
-$('.pic-slider').slick({
-  arrows:false,
-  autoplay:true,
-  autoplaySpeed: 0,
-  speed:6900,
-  infinite:true,
-  pauseOnHover: false,
-  pauseOnFocus: false,
-  cssEase:'linear',
-  slidesToScroll:1,
-  slidesToShow: 3,
-});
 
 
 
 //紙芝居
-$(window).on('load resize', function() {
-  const windowWidth = window.innerWidth;
-  const elements = $('.fixed');
-  if (windowWidth >= 768) {
-    Stickyfill.add(elements);
-  } else {
-    Stickyfill.remove(elements);
+
+
+
+
+
+
+//tab anime-----------------
+function GethashID(hashIDName) {
+  if(hashIDName) {
+    $('.tab li').find('a').each(function() {
+      var idName = $(this).attr('href');
+      if(idName == hashIDName) {
+        var parentElm = $(this).parent();
+        $('.tab li').removeClass('active');
+        $(parentElm).addClass('active');
+
+        $('.area').removeClass('is-active');
+        $(hashIDName).addClass('is-active');
+      }
+      
+    });
   }
+}
+
+
+$('.tab a').on('click', function() {
+  var idName = $(this).attr('href');
+  GethashID(idName);
+  return false;
 });
 
 

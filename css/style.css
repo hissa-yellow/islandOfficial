@@ -21,7 +21,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 
-/*loading--------------------------*/
+/*loading画面--------------------------*/
 #splash {
   position: fixed;
   width: 100%;
@@ -54,7 +54,7 @@ html::-webkit-scrollbar-thumb {
   stroke-dasharray: 1500;
   stroke-dashoffset: 1500;
 }
-/*↑loading--------------------------*/
+/*↑loading画面--------------------------*/
 
 
 
@@ -590,7 +590,7 @@ header {
 /*紙芝居---------------------------------------------------------*/
 #header {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
 }
 
 #container {
@@ -998,4 +998,329 @@ footer {
 
 .back-to-top i {
   margin-left: 1vw;
+}
+
+
+
+
+
+
+/* guidance.html----------------------------- */
+.first-span {
+  height: 7.96vw;
+}
+
+
+
+
+
+
+
+/* first.html----------------------------- */
+.what-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7.3vw;
+}
+
+.what-section h2 {
+  color: black;
+}
+
+.what-section svg {
+  width: 3.47vw;
+}
+
+#what {
+  padding-top: 7.77vw;
+  background-color: white;
+}
+
+#first-ne-che {
+  padding-top: 10.8vw;
+  padding-bottom: 20vw;
+}
+
+.whta-img {
+  width: 100%;
+}
+
+#how {
+  background-color: white;
+  padding: 10.8vw 0 10vw 0;
+  margin-bottom: 10vw;
+}
+
+.hoe-map {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 5vw;
+}
+
+.hoe-map p {
+  line-height: 1.5em;
+  font-size: 1.38vw;
+}
+
+.hoe-map svg {
+  width: 24.9vw;
+}
+
+#how-slider {
+  margin: 12.3vw 0;
+}
+
+#hometown {
+  padding: 10.8vw 0 10vw 0;
+  background-color: white;
+}
+
+.hometown-text {
+  margin: 0 auto 5.2vw;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1.38vw;
+
+}
+
+.hometown-img {
+  display: flex;
+  justify-content: center;
+}
+
+.hometownbtn {
+  text-align: center;
+  margin-top: 10vw;
+}
+
+.copy {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+
+
+/* access.html ---------------------------*/
+#access {
+  padding-top: 7.77vw;
+  padding-bottom: 5vw;
+  background-color: white;
+}
+
+.access-top {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 12.15vw;
+}
+
+.access-top svg {
+  width: 45.2vw;
+}
+
+.access-top h2 {
+  font-size: 4.16vw;
+  color: black;
+  line-height: 1.5em;
+  letter-spacing: 0.01em;
+}
+
+.access-top > div p {
+  line-height: 1.5em;
+  font-size: 1.38vw;
+}
+
+.access-top > div h2:first-of-type {
+  margin-top: 70px;
+}
+
+.access-top > div h2:last-of-type {
+  margin-bottom: 3.8vw;
+}
+
+.access-top-img {
+  width: 100%;
+}
+
+#table {
+  padding: 10vw 0 40vw;
+  background-color: white;
+  text-align: center;
+}
+
+.table-container {
+  padding: 0 20vw 10vw;
+}
+
+.ta-to {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sta-name {
+  background-color: #549361;
+  color: white;
+  line-height: 5vw;
+  padding: 0 2em;
+  font-size: 1.38vw;
+}
+
+.sta-time {
+  text-align: center;
+}
+
+.sta-time p {
+  font-size: 1.5vw;
+}
+
+.sta-time svg {
+  width: 4.04vw;
+}
+
+.table-time {
+  display: flex;
+  justify-content: space-around;
+  line-height: 5vw;
+}
+
+.table-time p {
+  font-size: 1.9vw;
+  padding: 0 0.5em;
+
+}
+
+
+.table-time p:first-of-type {
+ 
+  background-color: #8F5152;
+}
+
+.table-bo-con .table-time:not(:nth-child(odd)) {
+  border-top: 8px solid white;
+  border-bottom: 8px solid white;
+}
+
+
+.table-bottom {
+  margin: 5vw 10vw;
+  background-color: #549361;
+  color: white;
+  padding: 1vw 10vw 1vw;
+  position: relative;
+  
+}
+
+.table-bottom > p:last-child {
+  position: absolute;
+  right: -15.8vw;
+  bottom: 0;
+  color: black;
+  font-size: 1.5vw;
+}
+
+.table-time-top {
+  margin: 10px;
+  text-align: right;
+}
+
+.ferry-note {
+  position: relative;
+}
+
+.ferry-note-con {
+  position: absolute;
+  top: 5vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ferry-note p {
+  text-align: left;
+}
+
+.ferry-note a {
+  position: absolute;
+  top: 15vw;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+
+/* tab */
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab li a {
+  display: block;
+  background-color: #fff;
+  margin: 0 2px;
+  padding: 10px 20px;
+}
+
+.tab li.active a {
+  background-color: #51638F;
+  color: white;
+}
+
+.area {
+  display: none;
+  opacity: 0;
+  background-color: #51638F;
+  
+  color: white;
+}
+
+.area.is-active {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  
+}
+
+.tab-style {
+  margin: 0 9.61vw; 
+}
+
+.area-con {
+  padding: 5vw 11.1vw;
+}
+
+.area-con h2 {
+  border-bottom: 2px solid white;
+  font-size: 1.8vw;
+  padding-bottom: 0.3em;
+}
+
+.area-con li {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em 0;
+}
+
+.area-btn {
+  background-color: #8F5152;
+  padding: 0.8em 2em;
+}
+
+.access-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5vw;
+}
+
+.access-footer > a {
+  color: white;
 }
